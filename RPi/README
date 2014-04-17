@@ -9,3 +9,41 @@ java -Djava.library.path="/home/pi/lib/" -jar socketIO.jar
 
 where at /home/pi/lib you put the contents of the lib folder provided here as well.
 The default port to listen to connections is 8787.
+
+
+If you want everything to run on boot, so you don't have
+to manually start the program everytime, use the startUpScript.sh.
+
+Place it in your /home/pi folder and then edit the /etc/rc.local file:
+sudo nano /etc/rc.local
+
+add in the line BEFORE the end:
+sh /home/pi/startUpScript.sh
+
+Our /etc/rc.local file looks like this:
+
+#!/bin/sh -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+# Print the IP address
+_IP=$(hostname -I) || true
+if [ "$_IP" ]; then
+  printf "My IP address is %s\n" "$_IP"
+fi
+sh /home/pi/startUpScript.sh
+exit 0
+
+
+
+Now, every time you power up, you should be getting the camera and
+the IORelay java program running as well!
