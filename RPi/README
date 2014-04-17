@@ -1,0 +1,11 @@
+This java program when compiled as a runnable jar is to be run on
+a Raspberry Pi, with a arduino connected to one of the USB ports.
+
+Compile the java program or use the already provided one, with 32-bits JDK
+and not 64-bit that's used in most modern computers.
+
+The program can be run like this:
+java -Djava.library.path="/home/pi/lib/" -jar socketIO.jar
+
+where at /home/pi/lib you put the contents of the lib folder provided here as well.
+The default port to listen to connections is 8787.

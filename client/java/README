@@ -1,0 +1,3 @@
+After setting up the IP and the port that your server listens to
+this joystick should send the angle and the speed that the user
+chooses through a graphical joystick.

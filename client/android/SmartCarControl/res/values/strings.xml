@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Smart Car Control</string>
+    <string name="action_settings">Settings</string>
+	<string name="serverIp">Server IP</string>
+	<string name="serverPort">Server Port</string>
+	<string name="saveButton">Save</string>
+</resources>

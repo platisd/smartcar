@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/videoView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@android:drawable/screen_background_dark"
+        android:onClick="onVideo"
+        android:scaleType="fitXY" />
+
+      <se.chalmers.balmung.smartcar.JoystickView
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/joystickView"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentTop="true"
+          android:layout_marginRight="20dp" />
+
+</RelativeLayout>

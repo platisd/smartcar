@@ -1,0 +1,7 @@
+Arduino code to be used in the smartcar project by Team Pegasus
+as published on https://github.com/platisd/smartcar.git
+A client sends speed and angle data to a raspberry pi
+raspberry pi computes how much speed each motor should have
+and arduino (connected to RPi's USB port) interprets that data
+and drives the motors. An ADAFRUIT motor shield is used based on
+the L293D chip
