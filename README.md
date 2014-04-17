@@ -1,7 +1,8 @@
 smartcar
 ========
 
-This repository includes code to control an arduino - raspberry pi based vehicle from an android client.
+This repository includes code to control an arduino - raspberry pi based vehicle from
+a pure JAVA or an android client.
 Code was written by Team Pegasus unless stated otherwise.
 For any questions on how to set up or more, please send email here: guspladi[at]student[dot]gu[dot]se
 
