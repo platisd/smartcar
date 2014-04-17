@@ -7,3 +7,35 @@ in SmartCarControl/src/se/chalmers/balmung/smartcar/SettingsActivity.java
 IF the device is configured to be connected in a network created by
 the android phone via tethering. Otherwise, set the vehicle's IP manually
 in the settings page.
+
+In order to get the camera feed working, here are the instructions:
+
+1. Install apache:
+sudo apt-get install apache2 php5 libapache2-mod-php5
+
+2. install raspimjpeg:
+sudo apt-get install cmake
+git clone https://github.com/silvanmelchior/userland.git
+cd userland
+./buildme
+sudo ln -s /opt/vc/bin/raspimjpeg /usr/bin/raspimjpeg
+
+3. configure apache to listen to correct folder:
+sudo nano /etc/apache2/sites-available/default
+
+make the following changes to the file:
+> change  DocumentRoot to: /dev/shm/www
+> change to Directory to:  /dev/shm/www
+
+control + O to save, control + x to exit the nano
+
+4. restart raspberry pi
+sudo reboot
+
+5. After rebooting in order to run the camera (you will have to do this everytime or create a script to do this for you)
+sudo mkdir /dev/shm/www/
+sudo raspimjpeg -w 320 -h 240 -d 1 -of /dev/shm/www/pic.jpg
+
+
+Now you should be ready to stream from your android client!
+Just point it to the http://<vehicle_ip>/pic.jpg
