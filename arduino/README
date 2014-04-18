@@ -4,4 +4,7 @@ A client sends speed and angle data to a raspberry pi
 raspberry pi computes how much speed each motor should have
 and arduino (connected to RPi's USB port) interprets that data
 and drives the motors. An ADAFRUIT motor shield is used based on
-the L293D chip
+the L293D chip.
+
+In order to make the arduino run on Raspberry Pi, follow the instructions
+here: http://www.scribd.com/doc/150537740/Arduino-i-de-on-Raspberry-Pi
