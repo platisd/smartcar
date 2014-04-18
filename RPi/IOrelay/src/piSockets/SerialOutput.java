@@ -111,12 +111,10 @@ public class SerialOutput implements SerialPortEventListener {
 	 */
 	public synchronized void serialEvent(SerialPortEvent oEvent) {
 		if (oEvent.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
-			SerialInput fromRpi = new SerialInput();
 			try {
 				//print the input line from the arduino if there is such
 				String inputLine=input.readLine();
-				System.out.println(inputLine);
-				fromRpi.processInput(inputLine);
+				System.out.println("Arduino says: " + inputLine);
 			} catch (Exception e) {
 				System.err.println(e.toString());
 			}
