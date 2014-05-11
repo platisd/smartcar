@@ -9,5 +9,5 @@
 
 
 sudo mkdir /dev/shm/www/
-exec  java -Djava.library.path="/home/pi/lib/" -jar /home/pi/IOrelay.jar &
+exec  java -Djava.library.path="/home/pi/lib/" -jar /home/pi/socketIO.jar &
 sudo raspimjpeg -w 320 -h 240 -d 1 -of /dev/shm/www/pic.jpg &

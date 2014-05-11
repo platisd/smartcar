@@ -5,7 +5,7 @@ Compile the java program or use the already provided one, with 32-bits JDK
 and not 64-bit that's used in most modern computers.
 
 The program can be run like this:
-java -Djava.library.path="/home/pi/lib/" -jar socketIO.jar
+java -Djava.library.path="/home/pi/lib/" -jar IOrelay.jar
 
 where at /home/pi/lib you put the contents of the lib folder provided here as well.
 The default port to listen to connections is 8787.
@@ -47,3 +47,10 @@ exit 0
 
 Now, every time you power up, you should be getting the camera and
 the IORelay java program running as well!
+
+
+IF you get ELF class errors related to librxtxSerial.so, when trying
+to execute the jar file, then that means you have to get the correct one for your build.
+It should be placed in  /usr/lib/jni/ and called librxtxSerial-2.2pre1.so
+so, either make a link to that file in your /home/pi/lib OR copy paste
+it in the /home/pi/lib and rename it to librxtxSerial.so. 
