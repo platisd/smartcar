@@ -14,3 +14,6 @@ Yilmaz Caglar,
 Shanlin Tong,
 Pedram Shirinbolaghi,
 Yurou Zhao
+
+### Note
+If you are looking for the Smartcar library, which is a totally different project, please go to the [Smartcar shield](https://github.com/platisd/smartcar_shield) library repository.
